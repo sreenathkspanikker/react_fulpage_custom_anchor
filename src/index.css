@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,119 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --section-one: rgb(250, 54, 54);
+  --section-two: rgba(58, 206, 144, 0.87);
+  --section-three: rgb(24, 148, 185);
+  --section-four: rgb(221, 210, 56);
 }
+
+
+.App{
+  position: relative;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header .container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo{
+  color: white;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+header ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li{
+  padding: 1.5rem;
+
+}
+
+header ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+header ul li a:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: white;
+  font-weight: 700;
+}
+
+.section .container{
+  width: 85%;
+}
+
+.section-one{
+  background-color: var(--section-one);
+}
+.section-two{
+  background-color: var(--section-two);
+}
+.section-three{
+  background-color: var(--section-three);
+}
+.section-four{
+  background-color: var(--section-four);
+}
+
+.btn-scroll{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: aliceblue;
+  z-index: 1;
+  display: none;
+  visibility: hidden;
+  transition: all ease .4s;
+}
+
+.btn-scroll.true{
+  display: flex;
+  visibility: visible;
+}
+
+.btn-scroll:hover{
+  background: rgb(65, 65, 65);
+  color: white;
+}
+
+

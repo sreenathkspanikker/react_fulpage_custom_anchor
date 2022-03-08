@@ -1,0 +1,1 @@
+export const Section = (props) =>  <section id={`section-${props.id}`} className={`section-${props.className}`}>{props.children}</section>

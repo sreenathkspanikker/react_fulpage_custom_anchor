@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header, Section, ScrollTo } from './container/'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Section className="one" id="one">Section One</Section>
+      <Section className="two" id="two">Section Two</Section>
+      <Section className="three" id="three">Section Three</Section>
+      <Section className="four" id="four">Section Four</Section>
+      <ScrollTo />
     </div>
   );
 }
